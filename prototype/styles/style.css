@@ -1,3 +1,39 @@
+/* --- Paleta de Cores --- */
+
+/* Azul Primário (para fundo de cabeçalho e elementos principais) 
+--azul-primario: #005F73;*/
+
+/* Azul Secundário (para detalhes e hover) 
+--azul-secundario: #0A9396;*/
+
+/* Branco Moderno (para fundos e áreas gerais) 
+--branco-moderno: #E9F1F7;*/
+
+/* Cinza Claro (para bordas e textos secundários) 
+--cinza-claro: #94A3B8;*/
+
+/* Cor de Destaque (para botões e links principais) 
+--cor-destaque: #FFB703;*/
+
+/* Outro Contraste (para hover ou elementos interativos) 
+--outro-contraste: #EE9B00;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --azul-primario: #1F4E79;
+
+    --azul-secundario: #3A7CA3;
+
+    --branco-moderno: #F1F8FB;
+
+    --cinza-claro: #94A3B8;
+
+    --cor-destaque: #FFB703;
+
+    --outro-contraste: #EE9B00;
+
+}
 
 
 
@@ -13,7 +49,7 @@
 }
 
 html, body{
-    background-color: rgb(202, 231, 248);
+    background-color: var(--branco-moderno);
 
     height: 100%;
     width: 100%;
@@ -27,7 +63,7 @@ header{
     justify-content: space-between;
     position: absolute;
 
-    background-color: rgb(164, 250, 250);
+    background-color: var(--azul-primario);
 
     height: 50px;
     width: 100%;
@@ -37,11 +73,23 @@ header{
 
 nav{
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
 
-    background-color: rgb(154, 156, 253);
+    background-color: rgb(190, 253, 255);
 
     height: 100%;
     width: 30px;
+}
+
+
+
+.search-container{
+    position: relative;
+    display: inline-block;
+    width: 40vw;
 }
 
 #search-bar{
@@ -52,11 +100,15 @@ nav{
     padding: 10px;
 
     font-size: 13px;
-    border: 1px solid black;
+    border: 1px solid var(--cinza-claro);
     border-radius: 50px;
-    width: 40vw;
+    width: 100%;
     height: 30px;
-    background-color: rgba(255, 255, 255, 0.486);
+    background-color: rgba(250, 250, 250, 0.89);
+
+    color: var(--azul-secundario);
+    font-weight: bold;
+    font-family: 'Roboto';
 
     
 }
@@ -67,9 +119,12 @@ nav{
 
 #search-icon{
     position: absolute;
-    top: 18px;
-    left: 30vw;
-    color: rgb(192, 192, 192);
+    top: 50%;
+    left: 10px;
+    color: var(--azul-secundario);
+
+    transform: translateY(-50%);
+    pointer-events: none;
 }
 #search-icon path{
     
@@ -79,5 +134,19 @@ nav{
 
 .hidden {
     opacity: 0 !important;
+}
+
+#logo img{
+    height: 30px;
+}
+
+#my-profile{
+}
+
+#my-profile img{
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
 }
 
