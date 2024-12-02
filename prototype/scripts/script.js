@@ -32,3 +32,23 @@ searchBar.addEventListener('blur', () => {
 searchBar.addEventListener('input', () => {
     hideShowSearchIcon();
 });
+
+
+/* alterna o estilo dos itens selecionados na navbar*/
+
+
+const navbarItems = document.querySelectorAll('.nav-icons')
+
+function updateActiveItem(selectedItem) {
+    navbarItems.forEach(item => item.classList.remove('active'))
+
+    selectedItem.classList.add('active')
+
+   
+
+   
+}
+
+ navbarItems.forEach(item => {
+        item.addEventListener('click', () => updateActiveItem(item))
+    })

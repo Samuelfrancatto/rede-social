@@ -49,6 +49,7 @@
 }
 
 html, body{
+    display: flex;
     background-color: var(--branco-moderno);
 
     height: 100%;
@@ -150,3 +151,20 @@ nav{
     border-radius: 50%;
 }
 
+.nav-icons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+}
+.nav-icons.active{
+    border-right: 2px solid rgb(104, 139, 255);;
+
+    background-color: rgba(255, 255, 255, 0.562);
+}
+
+main{
+    display: flex;
+    height: 100%;
+}
